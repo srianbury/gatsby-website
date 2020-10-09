@@ -2,15 +2,16 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 
+import "./blog.css"
+
 const Blog = ({ data }) => {
   return (
     <Layout title="Blog">
-      <h1>Blog Page</h1>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <Link to={node.fields.slug}>
-            <h3>{`${node.frontmatter.title} ${node.frontmatter.date}`}</h3>
-            <p>{node.frontmatter.briefDescription}</p>
+            <h3 className="blog-li-title">{`${node.frontmatter.title} ${node.frontmatter.date}`}</h3>
+            <p className="blog-li-desc">{node.frontmatter.briefDescription}</p>
           </Link>
         </div>
       ))}
