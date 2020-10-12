@@ -10,7 +10,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
   }
   if (
-    ["image/jpeg", "image/png"].includes(node.internal.mediaType) &&
+    ["jpg", "png"].includes(node.extension) &&
     node.relativePath.split("/")[0] === "photos"
   ) {
     actions.createNodeField({

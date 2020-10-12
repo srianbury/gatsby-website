@@ -5,8 +5,8 @@ import "./header.css"
 
 const Header = ({ siteTitle }) => (
   <div>
-    <Link>
-      <h3 to="/">{siteTitle}</h3>
+    <Link to="/">
+      <h3>{siteTitle}</h3>
     </Link>
     <ul>
       <ListItem to="/" text="home" />
