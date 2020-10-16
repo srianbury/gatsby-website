@@ -9,16 +9,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: `/blog${createFilePath({ node, getNode, basePath: "blogs" })}`,
     })
   }
-  if (
-    ["jpg", "png"].includes(node.extension) &&
-    node.relativePath.split("/")[0] === "photos"
-  ) {
-    actions.createNodeField({
-      node,
-      name: "useInGallery",
-      value: true,
-    })
-  }
 }
 
 exports.createPages = async ({ graphql, actions }) => {
