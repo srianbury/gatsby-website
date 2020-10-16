@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: "https://srianbury.gtsb.io/",
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
